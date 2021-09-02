@@ -1,10 +1,19 @@
-## Speak Number Guessing Game
+# Speak Number Guessing Game
 
-Number guessing game where you speak your guess into the microphone using the speech recognition API
+### Number guessing game where you speak your guess into the microphone using the speech recognition API
 
-## Project Specifications
+**to take a look please click this link:** 
 
-- Display UI directing user to speak guess
-- Implement speech recognition to listen to mic
-- Process user's guess and match
-- Let user know higher, lower, match or not a number
+https://lenariem.github.io/speak_number_guess/
+
+### Technologies used: 
+* JavaScript
+* CSS
+* HTML
+* speech recognition API
+
+### User can
+- Speak a number using the mic to guess a hidden number
+- Process guess and match
+- Know higher, lower, match or not a number
+
