@@ -2,6 +2,8 @@ const msgEl = document.getElementById('msg');
 
 const randomNum = getRandomNumber();
 
+let tries = 0;
+
 console.log('Number:', randomNum);
 
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -47,15 +49,18 @@ function checkNumber(msg) {
   // Check number
   if (num === randomNum) {
     document.body.innerHTML = `
-      <h2>Congrats! You have guessed the number! <br><br>
+      <h2>Congrats! You have guessed the number in ${tries} tries! <br><br>
       It was ${num}</h2>
       <button class="play-again" id="play-again">Play Again</button>
     `;
+    tries = 0;
   } else if (num > randomNum) {
     // += it will append instead replace, so msg also will be shown
     msgEl.innerHTML += '<div>GO LOWER</div>';
+    tries++;
   } else {
     msgEl.innerHTML += '<div>GO HIGHER</div>';
+    tries++;
   }
 }
 
